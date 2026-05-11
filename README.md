@@ -10,7 +10,7 @@ Sitio web portfolio personal donde muestro proyectos, tecnologías y trabajos re
 
 ## Características
 
-- Diseño responsive
+- Diseño Minimalista
 - Animaciones y efectos visuales
 - Sección de proyectos
 - Integración multimedia
