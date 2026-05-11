@@ -1,24 +1,24 @@
 # Portfolio Aleix Crespo López
 
-Sitio web portfolio personal donde muestro proyectos, tecnologías y trabajos realizados como desarrollador.
+Sitio web de portfolio personal donde muestro proyectos, tecnologías y trabajos realizados como desarrollador.
 
-## Tecnologías utilizadas
+## 🚀 Tecnologías utilizadas
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
-## Características
+## ✨ Características
 
-- Diseño Minimalista
+- Diseño responsive
 - Animaciones y efectos visuales
 - Sección de proyectos
 - Integración multimedia
 
-## Demo
+## 🔗 Demo
 
-🔗 [Demo](https://aleixcrespolopez.github.io/PortfolioAleix/)
+👉 [Ver sitio web](https://aleixcrespolopez.github.io/PortfolioAleix/)
 
-## Autor
+## 👨‍💻 Autor
 
 Aleix Crespo López
