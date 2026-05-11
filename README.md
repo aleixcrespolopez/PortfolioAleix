@@ -4,8 +4,8 @@ Sitio web portfolio personal donde muestro proyectos, tecnologías y trabajos re
 
 ## Tecnologías utilizadas
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 
 ## Características
