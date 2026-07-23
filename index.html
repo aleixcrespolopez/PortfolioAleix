@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aleix@crespo:~$ portfolio</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23020c02'/%3E%3Crect x='1' y='1' width='30' height='30' rx='3' fill='none' stroke='%2300ff41' stroke-width='1.2'/%3E%3Crect x='1' y='1' width='30' height='8' rx='3' fill='%230a1a0a'/%3E%3Ccircle cx='6' cy='5' r='1.5' fill='%23ff3c3c'/%3E%3Ccircle cx='11' cy='5' r='1.5' fill='%23ffff00'/%3E%3Ccircle cx='16' cy='5' r='1.5' fill='%2300ff41'/%3E%3Ctext x='4' y='22' font-family='monospace' font-size='11' fill='%2300ff41'%3E%26gt%3B_%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Pantalla Inicio--> 
+
+<div id="boot">
+  <div id="boot-text">
+    <div class="dim" data-es="ALEIX_OS v2.4.1 — Iniciando entorno seguro..." data-en="ALEIX_OS v2.4.1 — Booting secure environment...">ALEIX_OS v2.4.1 — Iniciando entorno seguro...</div>
+    <div class="dim">Cargando kernel modules... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ok">[OK]</span></div>
+    <div class="dim">Montando filesystem /dev/portfolio... &nbsp;&nbsp;<span class="ok">[OK]</span></div>
+    <div class="dim">Empezando network interfaces... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ok">[OK]</span></div>
+    <div class="dim" data-es-inner="Cargando Perfil... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=&quot;warn&quot;>[ACTIVO]</span>" data-en-inner="Loading Profile... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=&quot;warn&quot;>[ACTIVE]</span>">Cargando Perfil... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="warn">[ACTIVO]</span></div>
+    <div class="dim" data-es="Autorizando usuario: aleix@crespo... &nbsp;&nbsp;" data-en="Authorizing user: aleix@crespo... &nbsp;&nbsp;">Autorizando usuario: aleix@crespo... &nbsp;&nbsp;<span class="ok" data-es="[Autorizado]" data-en="[Authorized]">[Autorizado]</span></div>
+    <br>
+    <div style="color:var(--green);" data-es="Bienvenido. Acceso Validado." data-en="Welcome. Access Validated.">Bienvenido. Acceso Validado.</div>
+  </div>
+  <div id="boot-progress"><div id="boot-bar"></div></div>
+</div>
+
+<canvas id="matrix"></canvas>
+
+<!-- Cursor--> 
+<div id="cur"></div>
+
+<!-- Navbar--> 
+<nav class="topbar">
+  <div class="topbar-dot red"></div>
+  <div class="topbar-dot yellow"></div>
+  <div class="topbar-dot green"></div>
+  <div class="topbar-title">aleix@portfolio:<span>~/home</span> — bash</div>
+  <div class="topbar-right">
+    <a href="#sobre-mi" data-es="./Sobre Mí" data-en="./About Me">./Sobre Mí</a>
+    <a href="#skills" data-es="./Proyectos" data-en="./Projects">./Proyectos</a>
+    <a href="#formacion" data-es="./Educación" data-en="./Education">./Educación</a>
+    <a href="#experiencia" data-es="./Experiencia" data-en="./Experience">./Experiencia</a>
+    <a href="#contacto" data-es="./Contacto" data-en="./Contact">./Contacto</a>
+  </div>
+  <!-- Hamburger Mobile -->
+  <div class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </div>
+  <!-- Cambio Idioma -->
+  <div class="lang-toggle-wrap" id="langToggle" title="Cambiar idioma / Switch language">
+    <span class="lang-flag flag-es" title="Español">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="24" height="16">
+        <rect width="60" height="40" fill="#c60b1e"/>
+        <rect y="10" width="60" height="20" fill="#ffc400"/>
+      </svg>
+    </span>
+    <div class="lang-slider-track" id="langTrack">
+      <div class="lang-slider-thumb" id="langThumb"></div>
+    </div>
+    <span class="lang-flag flag-en" title="English">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="24" height="16">
+        <rect width="60" height="40" fill="#012169"/>
+        <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="6"/>
+        <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="4"/>
+        <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="10"/>
+        <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="6"/>
+      </svg>
+    </span>
+  </div>
+</nav>
+
+<!-- Mobile Navigation Drawer -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#sobre-mi" class="mobile-nav-link" data-es="./Sobre Mí" data-en="./About Me">./Sobre Mí</a>
+  <a href="#skills" class="mobile-nav-link" data-es="./Proyectos" data-en="./Projects">./Proyectos</a>
+  <a href="#formacion" class="mobile-nav-link" data-es="./Educación" data-en="./Education">./Educación</a>
+  <a href="#experiencia" class="mobile-nav-link" data-es="./Experiencia" data-en="./Experience">./Experiencia</a>
+  <a href="#contacto" class="mobile-nav-link" data-es="./Contacto" data-en="./Contact">./Contacto</a>
+</nav>
+
+<!-- Terminal--> 
+<section class="hero" style="padding-top:48px;">
+
+  <div class="hero-left">
+    <div class="term-window">
+      <div class="term-titlebar">
+        bash — 80x24 &nbsp;&nbsp;
+        <span>aleix@portfolio</span>
+      </div>
+      <div class="term-body">
+        <div class="prompt">
+          <span class="user">aleix</span><span class="at">@</span><span class="host">portfolio</span>:<span style="color:var(--muted)">~$</span>
+          <span style="color:var(--text);"> whoami</span>
+        </div>
+        <div class="hero-name">
+          <div class="glitch">ALEIX</div>
+          <div>CRESPO</div>
+          <div style="-webkit-text-stroke:1px var(--green);color:transparent;text-shadow:none;">LÓPEZ</div>
+        </div>
+        <div class="hero-role">
+          <span class="tag">ESTUDIANTE_SMX</span>
+          <span class="tag">ESTUDIANTE_ASIX</span>
+          <span class="tag">TÉCNICO INFORMÁTICO</span>
+          <br>
+          <span style="color:var(--muted);font-size:12px;display:block;margin-top:8px;">Apasionado de la informática · Ciberseguridad · Programación</span>
+        </div>
+        <div class="prompt" style="margin-top:12px;">
+          <span class="user">aleix</span><span class="at">@</span><span class="host">portfolio</span>:<span style="color:var(--muted)">~$</span>
+          <span class="typing-line" id="typed"> </span>
+        </div>
+        <div class="hero-btns">
+          <a href="img/cvAleix.pdf" class="btn" target="blank" rel="noopener noreferrer">
+            <span>
+              <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6zm2-7h8v1H8v-1zm0 2.5h8v1H8v-1zm0-5h3v1H8v-1z"/>
+              </svg>
+              ./Curriculum
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/aleixcrespolopez/" class="btn ghost" target="blank" rel="noopener noreferrer">
+            <span>
+              <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              Linkedin/.
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div>
+      <div class="photo-frame">
+        <div class="photo-scan"></div>
+        <img id="pfoto" src="IMG/FotoCV.jpg" alt="Aleix Crespo López">
+        <div class="corner-br"></div>
+        <div class="corner-bl"></div>
+        <div class="photo-label">ID: ALEIX_CRESPO · EDAD: 17 AÑOS</div>
+      </div>
+</section>
+
+<!-- SOBRE MÍ-->
+<section id="sobre-mi">
+  <div class="sec-label">cat SobreMi.txt</div>
+  <h2 class="sec-title">Aleix.exe</h2>
+  <div class="about-grid">
+    <div class="terminal-block">
+      <div class="tb-bar"><span id="tb-filename">perfil.json</span></div>
+      <div class="tb-body">
+        <pre class="cmd" id="about-terminal-content"></pre>
+      </div>
+    </div>
+
+    <div class="stats-panel">
+      <div class="stat-row stat-clickable" data-stat="horas" title="Click para más info">
+        <span class="stat-key">PERFIL</span><span class="stat-val2">01</span>
+      </div>
+      <div class="stat-row stat-clickable" data-stat="formacion" title="Click para más info">
+        <span class="stat-key">FORMACIÓN</span><span class="stat-val2">02</span>
+      </div>
+      <div class="stat-row stat-clickable" data-stat="ingles" title="Click para más info">
+        <span class="stat-key">EXPERIENCIA</span><span class="stat-val2">03</span>
+      </div>
+      <div class="stat-row stat-clickable" data-stat="idiomas" title="Click para más info">
+        <span class="stat-key">IDIOMAS</span><span class="stat-val2">04</span>
+      </div>
+      <div class="stat-row stat-clickable" data-stat="ciudad" title="Click para más info">
+        <span class="stat-key">CONTACTO</span><span class="stat-val2">05</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="skills">
+  <div class="sec-label">ls -la proyectos/</div>
+  <h2 class="sec-title">PROYECTOS.DAT</h2>
+  <div class="skills-grid">
+    <div class="skill-panel" data-num="01">
+      <div class="skill-icon">🌐</div>
+      <div class="skill-name">RED DE UN CIBERCAFE EN PACKET TRACER</div>
+      <div class="skill-tags">
+        <span class="skill-tag">CIBERCAFE</span>
+        <span class="skill-tag">VLAN</span>
+        <span class="skill-tag">VTP</span>
+        <span class="skill-tag">REGLAS ACL</span>
+        <span class="skill-tag">ROUTER RIP</span>
+      </div>
+      <div class="project-btns">
+        <a href="proyecto1/Proyecto1.png" class="project-btn project-btn-preview" target="blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>PREVIEW</span>
+        </a>
+        <a href="proyecto1/Proyecto Cibercafe.pkt" class="project-btn project-btn-download" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>DESCARGAR</span>
+        </a>
+      </div>
+    </div>
+    <div class="skill-panel" data-num="02">
+      <div class="skill-icon">🖥️</div>
+      <div class="skill-name">MONTAJE DE HARDWARE</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Gaming PC</span>
+        <span class="skill-tag">Servidores Rack</span>
+        <span class="skill-tag">Ofimáticos</span>
+        <span class="skill-tag">Reparaciones</span>
+      </div>
+      <div class="project-btns">
+        <a href="proyecto2/Proyecto2.html" class="project-btn project-btn-preview" target="blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>PREVIEW</span>
+        </a>
+        <a href="proyecto2/Videos_Proyecto.rar" class="project-btn project-btn-download" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>DESCARGAR</span>
+        </a>
+      </div>
+    </div>
+    <div class="skill-panel" data-num="03">
+      <div class="skill-icon">⌛</div>
+      <div class="skill-name">PROXIMAMENTE</div>
+      <div class="skill-tags">
+        <span class="skill-tag">PROXIMAMENTE</span>
+        <span class="skill-tag">PROXIMAMENTE</span>
+        <span class="skill-tag">PROXIMAMENTE</span>
+        <span class="skill-tag">PROXIMAMENTE</span>
+        <span class="skill-tag">PROXIMAMENTE</span>
+      </div>
+      <div class="skill-tags">
+      </div>
+      <div class="project-btns">
+        <a href="#" class="project-btn project-btn-preview project-btn-disabled">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>PREVIEW</span>
+        </a>
+        <a href="#" class="project-btn project-btn-download project-btn-disabled" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>DOWNLOAD</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Educacion -->
+<section id="formacion">
+  <div class="sec-label">cat /var/log/Formación.log</div>
+  <h2 class="sec-title">FORMACIÓN.LOG</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-period">2026 — 2028</div>
+      <div class="tl-title">ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED (ASIX)</div>
+      <div class="tl-school">> Escola Pàlcam · Barcelona · <span style="color:var(--red);">En Curso</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2024 — 2026</div>
+      <div class="tl-title">SISTEMAS MICROINFORMÁTICOS Y REDES (SMX)</div>
+      <div class="tl-school">> Escola Pàlcam · Barcelona · <span style="color:var(--green);">Completado</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2020 — 2024</div>
+      <div class="tl-title">EDUCACIÓN SECUNDARIA OBLIGATORIA (ESO)</div>
+      <div class="tl-school">> Escola Pàlcam · Barcelona · <span style="color:var(--green);">Completado</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Experiencia -->
+<section id="experiencia">
+  <div class="sec-label">cat experiencia.sh</div>
+  <h2 class="sec-title">EXPERIENCIA_LABORAL.SH</h2>
+  <div class="exp-terminal">
+    <div class="exp-term-bar">
+      <span style="color:var(--muted)">root@aleix:</span>
+      <span class="path">~/experiencia/life-informatica</span>
+      <span style="margin-left:auto;font-size:10px;">EXIT: 0</span>
+    </div>
+    <div class="exp-body">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company">LIFE INFORMÀTICA</div>
+          <div class="exp-meta">
+            Prácticas profesionales · FCT
+            <span class="badge">VERIFICADO</span>
+            <span class="badge">Barcelona</span>
+          </div>
+        </div>
+        <div class="exp-meta-block">
+          <div class="exp-hours-big">515</div>
+          <div class="exp-h-label">// HORAS REGISTRADAS</div>
+        </div>
+      </div>
+      <div class="task-list">
+        <div class="task-item">montaje_hardware.sh — Montaje y ensamblaje de equipos informáticos<span class="task-check">[DONE]</span></div>
+        <div class="task-item">reparacion.sh — Reparación y diagnóstico de equipos averiados<span class="task-check">[DONE]</span></div>
+        <div class="task-item">mantenimiento.sh — Mantenimiento preventivo y correctivo de sistemas<span class="task-check">[DONE]</span></div>
+        <div class="task-item">soporte_tecnico.sh — Atención y soporte técnico a clientes<span class="task-check">[DONE]</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Idiomas -->
+<section id="idiomas">
+  <div class="sec-label">locale -a</div>
+  <h2 class="sec-title">IDIOAMS.CFG</h2>
+  <div class="lang-grid">
+    <div class="lang-panel">
+      <div class="lang-code">CA</div>
+      <div class="lang-full">CATALÀ — NATIU</div>
+      <div class="lang-bar"><div class="lang-fill" style="width:100%;"></div></div>
+      <div class="lang-pct">LEVEL: C2 · 100%</div>
+    </div>
+    <div class="lang-panel">
+      <div class="lang-code">ES</div>
+      <div class="lang-full">CASTELLANO — NATIVO</div>
+      <div class="lang-bar"><div class="lang-fill" style="width:100%;"></div></div>
+      <div class="lang-pct">LEVEL: C2 · 100%</div>
+    </div>
+    <div class="lang-panel">
+      <div class="lang-code">EN</div>
+      <div class="lang-full">ENGLISH — GOOD LEVEL</div>
+      <div class="lang-bar"><div class="lang-fill" style="width:80%;"></div></div>
+      <div class="lang-pct">LEVEL: B1-B2 · Comprensión y conversación fluidas</div>
+    </div>
+  </div>
+</section>
+
+<!-- Habilidades -->
+<section id="habilidades">
+  <div class="sec-label">chmod +x Habilidades_Personales.sh</div>
+  <h2 class="sec-title">HABILIDADES_PERSONALES.SH</h2>
+  <div class="soft-grid">
+    <div class="soft-item"><span class="si-icon">👥</span> TRABAJO EN EQUIPO <div class="si-bar"><div class="si-fill" style="width:85%;"></div></div></div>
+    <div class="soft-item"><span class="si-icon">🎯</span> LIDERAZGO <div class="si-bar"><div class="si-fill" style="width:90%;"></div></div></div>
+    <div class="soft-item"><span class="si-icon">📋</span> ORGANIZACIÓN <div class="si-bar"><div class="si-fill" style="width:95%;"></div></div></div>
+    <div class="soft-item"><span class="si-icon">⚡</span> DISCIPLINA <div class="si-bar"><div class="si-fill" style="width:100%;"></div></div></div>
+    <div class="soft-item"><span class="si-icon">🔍</span> RESOLUCIÓN DE PROBLEMAS <div class="si-bar"><div class="si-fill" style="width:90%;"></div></div></div>
+    <div class="soft-item"><span class="si-icon">📡</span> APRENDIZAJE CONTINUO <div class="si-bar"><div class="si-fill" style="width:98%;"></div></div></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="sec-label">./contacto.sh --init</div>
+  <h2 class="sec-title">CONTACTO.SH</h2>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-cta">¿HABLAMOS?</div>
+      <div class="contact-sub">
+        Disponible para trabajar, colaboraciones y oportunidades en el mundo de la ciberseguridad y sistemas.<br><br>
+        <span style="color:var(--green);">$ </span>ping aleix@crespo --message "hola"
+      </div>
+    </div>
+    <div class="contact-items">
+      <div class="contact-item">
+        <span class="ci-icon">👤</span>
+        <div><span class="ci-label">NOMBRE</span>Aleix Crespo López</div>
+      </div>
+      <a href="tel:+34609908996" class="contact-item">
+        <span class="ci-icon">📞</span>
+        <div><span class="ci-label">TELÉFONO</span>+34 609 90 89 96</div>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aleixcrespolopez@gmail.com" class="contact-item" target="blank" rel="noopener noreferrer">
+        <span class="ci-icon">✉</span>
+        <div><span class="ci-label">EMAIL</span>aleixcrespolopez@gmail.com</div>
+      </a>
+      <a href="https://www.linkedin.com/in/aleixcrespolopez/" target="_blank" class="contact-item">
+        <span class="ci-icon">🔗</span>
+        <div><span class="ci-label">LINKEDIN</span>linkedin.com/in/aleixcrespolopez</div>
+      </a>
+      <div class="contact-item">
+        <span class="ci-icon">📍</span>
+        <div><span class="ci-label">UBICACIÓN</span>Barcelona, España · CP 08025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- Final -->
+
+<footer>
+  <div class="f-logo">aleix@crespo:~$</div>
+  <div>© 2026 Aleix Crespo López · SMX · Escola Pàlcam</div>
+  <div style="color:var(--green);">STATUS: [ACTIVO]</div>
+</footer>
+
+<script src="js/portfolio.js"></script>
+</body>
+</html>
