@@ -2451,3 +2451,21 @@ html[data-theme=light] .sb .sb-on{background:#c3c8c1}
 /* modo claro: el radar de la foto más visible */
 html[data-theme=light] .xsweep{background:conic-gradient(from 0deg,rgba(0,140,60,.38),rgba(0,140,60,.12) 40deg,transparent 70deg)}
 html[data-theme=light] .xradar{opacity:1}
+
+/* =====================================================
+   Responsive del hero: el radar de la foto nunca pisa la terminal
+   ===================================================== */
+@media(min-width:901px) and (max-width:1199px){
+  .hero{grid-template-columns:1.2fr 1fr}
+  .hero-left{padding:80px 28px 80px 40px}
+  .hero-right{padding:80px 20px}
+  .photo-frame{width:220px}
+  .xradar{width:calc(100% + 180px)}
+  .photo-label{top:calc(100% + 104px);left:-60px;right:-60px;white-space:nowrap}
+}
+@media(max-width:900px){
+  .hero-right{padding:150px 28px 170px!important}
+}
+@media(max-width:600px){
+  .hero-right{padding:100px 16px 130px!important}
+}
