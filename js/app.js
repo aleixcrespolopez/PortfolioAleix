@@ -121,7 +121,7 @@ boot.innerHTML=`
   </svg>
   <div class="nb-g1" id="nbG1" data-t="${L('ACCESO CONCEDIDO','ACCESS GRANTED')}">${L('ACCESO CONCEDIDO','ACCESS GRANTED')}</div>
   <div class="nb-g2">${L('Bienvenido, visitante','Welcome, visitor')} · uid=1000(guest)</div>
-  <div class="nb-g3">Aleix Crespo López<br><span>${L('Técnico informático · ASIX · Ciberseguridad','IT technician · ASIX · Cybersecurity')}</span></div>
+  <div class="nb-g3">Aleix Crespo López<br><span>${L('Técnico informático · ASIR · Ciberseguridad','IT technician · ASIR · Cybersecurity')}</span></div>
   <div class="nb-wait" aria-hidden="true"><i></i></div>
 </div>`;
 
@@ -244,7 +244,7 @@ setTimeout(go,21000);
 const statData = {
   horas: {
     filename: 'perfil.json',
-    content: `{\n  <span class="key">"nombre"</span>: <span class="str">"Aleix Crespo López"</span>,\n  <span class="key">"rol"</span>: <span class="str">"Técnico Informático"</span>,\n  <span class="key">"ubicación"</span>: <span class="str">"Barcelona, ES"</span>,\n  <span class="key">"formación"</span>: <span class="str">"ASIX @ Escola Pàlcam"</span>,\n  <span class="key">"apasionado_de"</span>: [\n    <span class="str">"redes"</span>, <span class="str">"hardware"</span>,\n    <span class="str">"ciberseguridad"</span>, <span class="str">"sistemas"</span>\n  ],\n  <span class="key">"objetivo"</span>: <span class="str">"Seguir creciendo en el sector"</span>,\n  <span class="key">"disponible"</span>: <span style="color:var(--green)">TRUE</span>\n}`
+    content: `{\n  <span class="key">"nombre"</span>: <span class="str">"Aleix Crespo López"</span>,\n  <span class="key">"rol"</span>: <span class="str">"Técnico Informático"</span>,\n  <span class="key">"ubicación"</span>: <span class="str">"Barcelona, ES"</span>,\n  <span class="key">"formación"</span>: <span class="str">"ASIR @ Escola Pàlcam"</span>,\n  <span class="key">"apasionado_de"</span>: [\n    <span class="str">"redes"</span>, <span class="str">"soporte técnico"</span>,\n    <span class="str">"ciberseguridad"</span>, <span class="str">"sistemas"</span>\n  ],\n  <span class="key">"objetivo"</span>: <span class="str">"Seguir creciendo en el sector"</span>,\n  <span class="key">"disponible"</span>: <span style="color:var(--green)">TRUE</span>\n}`
   },
   idiomas: {
     filename: 'idiomas.json',
@@ -252,7 +252,7 @@ const statData = {
   },
   formacion: {
     filename: 'formacion.log',
-    content: `{\n  <span class="key">"centro"</span>: <span class="str">"Escola Pàlcam · Barcelona"</span>,\n\n  <span class="key">"ASIX"</span>: <span class="str">"2026 — 2028 ·</span> <span style="color:var(--red)">EN_CURSO</span><span class="str">"</span>,\n<span style="color:var(--muted)">    // Administración de Sistemas Informáticos en Red</span>\n<span style="color:var(--muted)">    // SO · Redes · Servicios · BBDD · Seguridad</span>\n  <span class="key">"SMX"</span>: <span class="str">"2024 — 2026 ·</span> <span style="color:var(--green)">Completado</span><span class="str">"</span>,\n<span style="color:var(--muted)">    // Sistemas Microinformáticos y Redes</span>\n<span style="color:var(--muted)">    // Hardware · SO · Redes locales · 515 h FCT</span>\n  <span class="key">"ESO"</span>: <span class="str">"2020 — 2024 ·</span> <span style="color:var(--green)">Completado</span><span class="str">"</span>\n<span style="color:var(--muted)">    // Educación Secundaria Obligatoria</span>\n<span style="color:var(--muted)">    // Tecnología · Matemáticas · Idiomas</span>\n}`
+    content: `{\n  <span class="key">"centro"</span>: <span class="str">"Escola Pàlcam · Barcelona"</span>,\n\n  <span class="key">"ASIR"</span>: <span class="str">"2026 — 2028 ·</span> <span style="color:var(--red)">EN_CURSO</span><span class="str">"</span>,\n<span style="color:var(--muted)">    // Administración de Sistemas Informáticos en Red</span>\n<span style="color:var(--muted)">    // SO · Redes · Servicios · BBDD · Seguridad</span>\n  <span class="key">"SMX"</span>: <span class="str">"2024 — 2026 ·</span> <span style="color:var(--green)">Completado</span><span class="str">"</span>,\n<span style="color:var(--muted)">    // Sistemas Microinformáticos y Redes</span>\n<span style="color:var(--muted)">    // Hardware · SO · Redes locales · 515 h FCT</span>\n  <span class="key">"ESO"</span>: <span class="str">"2020 — 2024 ·</span> <span style="color:var(--green)">Completado</span><span class="str">"</span>\n<span style="color:var(--muted)">    // Educación Secundaria Obligatoria</span>\n<span style="color:var(--muted)">    // Tecnología · Matemáticas · Idiomas</span>\n}`
   },
   ingles: {
     filename: 'experiencia.json',
@@ -267,7 +267,7 @@ const statData = {
 const statDataEn = {
   horas: {
     filename: 'profile.json',
-    content: `{\n  <span class="key">"name"</span>: <span class="str">"Aleix Crespo López"</span>,\n  <span class="key">"role"</span>: <span class="str">"IT Technician"</span>,\n  <span class="key">"location"</span>: <span class="str">"Barcelona, ES"</span>,\n  <span class="key">"education"</span>: <span class="str">"ASIX @ Escola Pàlcam"</span>,\n  <span class="key">"passionate_about"</span>: [\n    <span class="str">"networking"</span>, <span class="str">"hardware"</span>,\n    <span class="str">"cybersecurity"</span>, <span class="str">"systems"</span>\n  ],\n  <span class="key">"goal"</span>: <span class="str">"Keep growing in the industry"</span>,\n  <span class="key">"available"</span>: <span style="color:var(--green)">TRUE</span>\n}`
+    content: `{\n  <span class="key">"name"</span>: <span class="str">"Aleix Crespo López"</span>,\n  <span class="key">"role"</span>: <span class="str">"IT Technician"</span>,\n  <span class="key">"location"</span>: <span class="str">"Barcelona, ES"</span>,\n  <span class="key">"education"</span>: <span class="str">"ASIR @ Escola Pàlcam"</span>,\n  <span class="key">"passionate_about"</span>: [\n    <span class="str">"networking"</span>, <span class="str">"hardware"</span>,\n    <span class="str">"cybersecurity"</span>, <span class="str">"systems"</span>\n  ],\n  <span class="key">"goal"</span>: <span class="str">"Keep growing in the industry"</span>,\n  <span class="key">"available"</span>: <span style="color:var(--green)">TRUE</span>\n}`
   },
   idiomas: {
     filename: 'languages.json',
@@ -275,7 +275,7 @@ const statDataEn = {
   },
   formacion: {
     filename: 'education.log',
-    content: `{\n  <span class="key">"school"</span>: <span class="str">"Escola Pàlcam · Barcelona"</span>,\n\n  <span class="key">"ASIX"</span>: <span class="str">"2026 — 2028 ·</span> <span style="color:var(--red)">IN_PROGRESS</span><span class="str">"</span>,\n<span style="color:var(--muted)">    // Network Computer Systems Administration</span>\n<span style="color:var(--muted)">    // OS · Networking · Services · DBs · Security</span>\n  <span class="key">"SMX"</span>: <span class="str">"2024 — 2026 ·</span> <span style="color:var(--green)">Completed</span><span class="str">"</span>,\n<span style="color:var(--muted)">    // Microcomputer Systems and Networks</span>\n<span style="color:var(--muted)">    // Hardware · OS · Local networks · 515 h FCT</span>\n  <span class="key">"ESO"</span>: <span class="str">"2020 — 2024 ·</span> <span style="color:var(--green)">Completed</span><span class="str">"</span>\n<span style="color:var(--muted)">    // Compulsory Secondary Education</span>\n<span style="color:var(--muted)">    // Technology · Maths · Languages</span>\n}`
+    content: `{\n  <span class="key">"school"</span>: <span class="str">"Escola Pàlcam · Barcelona"</span>,\n\n  <span class="key">"ASIR"</span>: <span class="str">"2026 — 2028 ·</span> <span style="color:var(--red)">IN_PROGRESS</span><span class="str">"</span>,\n<span style="color:var(--muted)">    // Network Computer Systems Administration</span>\n<span style="color:var(--muted)">    // OS · Networking · Services · DBs · Security</span>\n  <span class="key">"SMX"</span>: <span class="str">"2024 — 2026 ·</span> <span style="color:var(--green)">Completed</span><span class="str">"</span>,\n<span style="color:var(--muted)">    // Microcomputer Systems and Networks</span>\n<span style="color:var(--muted)">    // Hardware · OS · Local networks · 515 h FCT</span>\n  <span class="key">"ESO"</span>: <span class="str">"2020 — 2024 ·</span> <span style="color:var(--green)">Completed</span><span class="str">"</span>\n<span style="color:var(--muted)">    // Compulsory Secondary Education</span>\n<span style="color:var(--muted)">    // Technology · Maths · Languages</span>\n}`
   },
   ingles: {
     filename: 'experience.json',
@@ -358,9 +358,9 @@ const translations = {
     sec_label_cert: 'ls -la ~/certs/',
     sec_title_cert: 'CERTIFICACIONES.CRT',
     tag1: 'ESTUDIANTE_SMX',
-    tag2: 'ESTUDIANTE_ASIX',
+    tag2: 'ESTUDIANTE_ASIR',
     tag3: 'TÉCNICO INFORMÁTICO',
-    hero_sub: 'Apasionado de la informática · Ciberseguridad · Programación',
+    hero_sub: 'Apasionado de la informática · Con ganas de creecer en el ambito profesional',
     btn_cv: './Curriculum',
     photo_label: 'ID: ALEIX_CRESPO · EDAD: 18 AÑOS',
     sec_label_about: 'cat SobreMi.txt',
@@ -378,7 +378,7 @@ const translations = {
     proj2_tags: ['Gaming PC', 'Servidores Rack', 'Ofimáticos', 'Reparaciones'],
     sec_label_edu: 'cat /var/log/Formación.log',
     sec_title_edu: 'FORMACIÓN.LOG',
-    edu1_title: 'ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED (ASIX)',
+    edu1_title: 'ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED (ASIR)',
     edu1_school: '> Escola Pàlcam · Barcelona · ',
     edu1_status: 'En curso',
     edu2_title: 'SISTEMAS MICROINFORMÁTICOS Y REDES (SMX)',
@@ -422,9 +422,9 @@ const translations = {
     sec_label_cert: 'ls -la ~/certs/',
     sec_title_cert: 'CERTIFICATIONS.CRT',
     tag1: 'SMX_STUDENT',
-    tag2: 'ASIX_STUDENT',
+    tag2: 'ASIR_STUDENT',
     tag3: 'IT TECHNICIAN',
-    hero_sub: 'Passionate about IT · Cybersecurity · Programming',
+    hero_sub: 'Passionate about IT · Eager to grow professionally',
     btn_cv: './Resume',
     photo_label: 'ID: ALEIX_CRESPO · AGE: 18 YEARS',
     sec_label_about: 'cat AboutMe.txt',
@@ -442,7 +442,7 @@ const translations = {
     proj2_tags: ['Gaming PC', 'Rack Servers', 'Office PCs', 'Repairs'],
     sec_label_edu: 'cat /var/log/Education.log',
     sec_title_edu: 'EDUCATION.LOG',
-    edu1_title: 'NETWORK COMPUTER SYSTEMS ADMINISTRATION (ASIX)',
+    edu1_title: 'NETWORK COMPUTER SYSTEMS ADMINISTRATION (ASIR)',
     edu1_school: '> Escola Pàlcam · Barcelona · ',
     edu1_status: 'In progress',
     edu2_title: 'MICROCOMPUTER SYSTEMS AND NETWORKS (SMX)',
@@ -811,7 +811,7 @@ sync();$('#langToggle').addEventListener('click',()=>setTimeout(sync,0));
 // Radar alrededor de la foto
 const fr=$('.photo-frame'),wrap=fr&&fr.parentElement;
 if(fr){const rc=document.createElement('canvas');rc.className='xradar';const sw=document.createElement('div');sw.className='xradar xsweep';fr.prepend(sw);fr.prepend(rc);const rx=rc.getContext('2d');
- const SK=['WinServer','AD','Redes','HW','Kali','Nmap','VMware','CyberSec'],bl=SK.map((s,i)=>({s,a:i/SK.length*Math.PI*2+.5,o:(i%2)*14}));
+ const SK=['WinServer','AD','Redes','Firewalls','Kali','Nmap','Osint','CyberSec'],bl=SK.map((s,i)=>({s,a:i/SK.length*Math.PI*2+.5,o:(i%2)*14}));
  let S=0,hot=false;const TAU=Math.PI*2;
  const draw=()=>{const d=Math.min(devicePixelRatio||1,window.__pf?__pf.dpr:2);S=rc.clientWidth;if(!S)return;rc.width=rc.height=S*d;rx.setTransform(d,0,0,d,0,0);
   const lt=document.documentElement.dataset.theme==='light',g=lt?'#007a35':(window._g||'#00ff66'),A=lt?['77','44','bb','ff']:['44','22','88','cc'],c=S/2,k=S/500,ph=fr.offsetWidth/2;rx.clearRect(0,0,S,S);
